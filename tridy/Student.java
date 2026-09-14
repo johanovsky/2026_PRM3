@@ -3,11 +3,69 @@ package tridy;
 public class Student {
 
     //vlastnosti / atributy / data / fields
-    String name;
-    String surname;
-    int age;
-    boolean sex;
+    //modifikator pristupu (private / public / protected)
+    private String name;
+    private String surname;
+    private int age;
+    private boolean sex;
 
+    //metody
+    //konstruktor
+    //naplnime data objektu, svymi hodnotami
+    public Student(String name, String surname, int age, boolean sex) {
+        this.name = name;
+        this.surname = surname;
+        if(age < 0) {
+            //je to spatny vek -> dame default
+            age = 0;
+        } else {
+            this.age = age;
+        }
+        this.sex = sex;
+    }
+
+    //metody pro precteni dat - gettery
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public int getAge() {
+        if(sex == false) {
+            return 18;
+        } else {
+            return age;
+        }
+    }
+
+    public boolean getSex() {
+        return sex;
+    }
+
+    //metody pro zmenu dat - settery
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setAge(int age) {
+        if(age >= 0) {
+            //tak to je v poradku
+            this.age = age;
+        }
+    }
+
+    public void setSex(boolean sex) {
+        this.sex = sex;
+    }
+
+    /*
     public static void main(String[] args) {
 
         //vytvoreni instance moji tridy
@@ -18,4 +76,5 @@ public class Student {
         //vypis atributu do konzole
         System.out.println(s1.surname);
     }
+    */
 }
