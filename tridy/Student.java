@@ -65,6 +65,18 @@ public class Student {
         this.sex = sex;
     }
 
+    @Override 
+    public String toString() {
+        String vys = "Jmeno: " + getName() + ", prijmeni: " + getSurname() + 
+        ", vek: " + getAge() + ", pohlavi: ";
+        if(getSex() == true) {
+            vys += "muz";
+        } else {
+            vys += "zena";
+        }
+        return vys;
+    }
+
     /*
     public static void main(String[] args) {
 

@@ -20,5 +20,7 @@ public class TestStudent {
         System.out.println("prijmeni: " + s1.getSurname());
         System.out.println("vek: " + s1.getAge());
         System.out.println("pohlavi: " + s1.getSex());
+
+        System.out.println(s1);
     }
 }
