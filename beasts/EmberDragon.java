@@ -154,4 +154,24 @@ public class EmberDragon {
             System.out.println("Mrtvy drak uz nevzplane");
         }
     }
+
+    public void fireBreath(EmberDragon enemy) {
+        if(getHp() > 0) {
+            //drak zije
+            if(getMana() >= 7) {
+                //ziju a mam manu
+                System.out.println("Plivu ohen");
+                //snizime manu plivacovi
+                setMana(getMana() - 7);
+                //snizime hp nepriteli
+                enemy.setHp(enemy.getHp() - 8);
+            } else {
+                //sice ziju, ale nemam manu
+                System.out.println("Nedostatek many");
+            }
+        } else {
+            //drak nezije
+            System.out.println("Mrtvy drak neplive ohen");
+        }
+    }
 }
