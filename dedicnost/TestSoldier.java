@@ -11,5 +11,6 @@ public class TestSoldier {
         System.out.println(s2);
 
         Shooter s3 = new Shooter("Katz", 10, 10, 10, 10);
+        System.out.println(s3);
     }
 }
