@@ -48,12 +48,28 @@ public class Shooter extends Soldier {
             //kontrola presnosti
             if(accuracy < getAccuracy()) {
                 //zasah
+                //spocitame poskozeni
+                int dmg = getPower() - enemy.getArmor();
+                //jestlize dmg je vetsi jak 0
+                if(dmg > 0) {
+                    //strela prestrlila brneni -> snizime nepriteli hp
+                    enemy.setHp(enemy.getHp() - dmg);
+                    System.out.println("Zasah a poskozeni");
+                } else {
+                    //sice zasah, ale bez poskozeni
+                    System.out.println("Zasah, bez poskozeni");
+                }
             } else {
                 //vedle
+                System.out.println("Vedle");
             }
         } else {
             //jsem mrtvy nestrilim
             System.out.println("Nelze strilet");
         }
+    }
+
+    void train(Shooter ally) {
+        System.out.println("Trenuji");
     }
 }
