@@ -33,7 +33,7 @@ public class TestSoldier {
         //ozivime Katze
         s3.setHp(5);
         s4.fight(s3);
-        System.out.println("strleci se perou");
+        System.out.println("strelci se perou");
         System.out.println(s3);
         System.out.println(s4);
 
